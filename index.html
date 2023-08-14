@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
 
 <head>
@@ -11,51 +11,64 @@
 </head>
 
 <body>
+    <div class="tiledBackground">
+    </div>
+
     <div class="container">
-        <div class="row justify-content-center mt-4">
-            <div class="col-12 text-center">
-                <h1>CRYPTO TRACKER</h1>
-            </div>
-            <div class="col-12 text-center">
-                <h4>Nishant Trivedi</h4>
-            </div>
+        <div class="row text-center">
+            <h1 col-12>CRYPTO TRACKER<h1>
+        </div>
+        <div class="row text-center">
+            <h4 col-12>Nishant Trivedi<h1>
         </div>
 
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-6">
-                <form id="searchForm">
-                    <label for="coinType"><b>Coin Type</b></label>
-                    <select name="coinType" class="form-control form-control-lg">
-                        <option value="bitcoin">Bitcoin</option>
-                        <option value="dogecoin">Dogecoin</option>
-                        <option value="ethereum">Ethereum</option>
-                        <option value="polkadot">Polkadot</option>
-                        <option value="tether">Tether</option>
-                    </select>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block mt-3" id="btn">Get Price</button>
-                </form>
-            </div>
+        <div class="row">
+            <form id="searchForm">
+                <label for="xyz"><b>coin type</b></label>
+                <select name="coinType" class="form-control form-control-lg">
+                    <option value="bitcoin">Bitcoin</option>
+                    <option value="dogecoin">Dogecoin</option>
+                    <option value="ethereum">Ethereum</option>
+                    <option value="polkadot">Polkadot</option>
+                    <option value="tether">Tether</option>
+                </select>
+
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn">Get Price</button>
+
+            </form>
         </div>
 
-        <div class="row justify-content-center mt-4">
-            <div class="col-md-8">
-                <table class="table table-bordered" id="tableResult">
-                    <thead>
-                        <tr>
-                            <th>Coin</th>
-                            <th>Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table content goes here -->
-                    </tbody>
-                </table>
-            </div>
+        <div class="col-md-7 text-center row justify-content-center" id="table">
+            <table class="col-md-12 m-2" border="2px" id="tableResult">
+                <!-- -- -->
+
+                <!-- -- -->
+            </table>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app.js"></script>
+
+
+    <script type='text/javascript'
+        data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({ c: '87b44cd1-4ec8-4a76-90e6-c650df4cc86a', f: true }); done = true; } }; })();</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R5LSRKLMDC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-R5LSRKLMDC');
+    </script>
+
+
+
+
+
 </body>
 
 </html>
