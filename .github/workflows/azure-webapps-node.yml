@@ -29,6 +29,20 @@ permissions:
   contents: read
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Add steps to build your application and generate necessary outputs
+      # For example, you might run compilation, packaging, etc.
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact-name   # Replace with your artifact name
+          path: ./path-to-artifact # Replace with the actual path to the artifact
+
   deploy:
     permissions:
       contents: none
@@ -38,10 +52,10 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: Download artifact from build job
+      - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: node-app
+          name: my-artifact-name   # Replace with your artifact name
 
       - name: 'Deploy to Azure WebApp'
         id: deploy-to-webapp
